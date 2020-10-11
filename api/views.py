@@ -1,8 +1,9 @@
-from rest_framework import status, viewsets
-from posts.models import Post, Comment
 from django.shortcuts import get_object_or_404
-from .serializers import CommentSerializer, PostSerializer
+from rest_framework import status, viewsets
 from rest_framework.permissions import IsAuthenticated
+
+from posts.models import Post, Comment
+from .serializers import CommentSerializer, PostSerializer
 from .permissions import IsOwnerOrReadOnly
 
 
